@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using BookInvoicing.Finance;
 using BookInvoicing.Purchase;
 using BookInvoicing.Storage;
 
@@ -12,8 +14,9 @@ namespace BookInvoicing.Report
         public double GetTotalAmount()
         {
             var invoices = _repository.GetInvoiceMap().Values;
-            var totalAmount = invoices.Sum(invoice => invoice.ComputeTotalAmount());
-            return totalAmount;
+            var totalAmount = invoices.Sum(invoice =>
+                CurrencyConverter.ToUsd(invoice.ComputeTotalAmount(), invoice.Country.Currency));
+            return GetRoundedAmount(totalAmount);
         }
 
         public int GetTotalSoldBooks()
@@ -24,6 +27,8 @@ namespace BookInvoicing.Report
 
             return totalSoldBooks;
         }
+
+        private double GetRoundedAmount(double totalAmount) => Math.Round(totalAmount, 2);
 
         public long GetNumberOfIssuedInvoices() => _repository.GetInvoiceMap().Count;
     }
