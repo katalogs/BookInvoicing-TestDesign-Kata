@@ -1,6 +1,6 @@
 # Test data builders kata 
 
-The following katas is a backport from [Mikado Method and Test Data Builders Kata](https://github.com/murex/mikado-testbuilders-kata) under the [MIT Licence](https://github.com/murex/mikado-testbuilders-kata/blob/master/LICENSE.md).
+The following katas is a backport from [Mikado Method and Test Data Builders Kata](https://github.com/murex/mikado-testbuilders-kata) under the [MIT Licence](./LICENSE).
 
 Tests are included in this version to have a training focused on the usage of the [Tests data builders](http://www.natpryce.com/articles/000714.html), removing the code discovery needs.
 
