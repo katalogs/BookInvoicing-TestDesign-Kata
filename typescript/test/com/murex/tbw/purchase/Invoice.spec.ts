@@ -1,7 +1,7 @@
-import {Invoice} from "../../../../../src/com/murex/tbw/purchase/Invoice";
-import {Author, Genre, Novel} from '../../../../../src/com/murex/tbw/domain/book';
-import {Country, Currency, Language} from '../../../../../src/com/murex/tbw/domain/country';
-import {PurchasedBook} from '../../../../../src/com/murex/tbw/purchase';
+import {Invoice} from "@app/purchase";
+import {Author, Genre, Novel} from '@app/domain/book';
+import {Country, Currency, Language} from '@app/domain/country';
+import {PurchasedBook} from '@app/purchase';
 import {Set} from "immutable";
 
 describe(Invoice, () => {

@@ -1,9 +1,7 @@
-import {Order} from "./Order";
-import {Book} from "../domain/book/Book";
-import {Invoice} from "../purchase/Invoice";
-import {Client} from "./Client";
-import {PurchasedBook} from "../purchase/PurchasedBook";
+import {Book} from "@app/domain/book";
+import {Invoice, PurchasedBook} from "@app/purchase";
 import {MainRepository} from "../MainRepository";
+import {Client, Order} from ".";
 
 export class BooksOrder implements Order {
   private readonly client: Client;
