@@ -8,7 +8,7 @@ Tests are included in this version to have a training focused on the usage of th
 
 This kata includes the following versions:
 
-- [c#](./csharp)
+- [c#](./csharp/README.md)
 - [typescript](./typescript/README.md)
 
 ## Credits
