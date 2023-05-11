@@ -1,7 +1,6 @@
-import {Invoice} from "@app/purchase";
+import {Invoice, PurchasedBook} from "@app/purchase";
 import {Author, Genre, Novel} from '@app/domain/book';
 import {Country, Currency, Language} from '@app/domain/country';
-import {PurchasedBook} from '@app/purchase';
 import {Set} from "immutable";
 
 describe(Invoice, () => {
