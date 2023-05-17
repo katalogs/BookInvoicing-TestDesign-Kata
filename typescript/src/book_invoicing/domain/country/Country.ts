@@ -1,5 +1,5 @@
-import {Currency} from "./Currency";
-import {Language} from "./Language";
+import {Currency} from "@app/domain/country/Currency";
+import {Language} from "@app/domain/country/Language";
 
 export class Country {
   readonly name: string;

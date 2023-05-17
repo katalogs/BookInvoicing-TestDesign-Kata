@@ -1,5 +1,5 @@
-import {Author} from "./Author";
-import {Language} from "../country/Language";
+import {Author} from "@app/domain/book/Author";
+import {Language} from "@app/domain/country/Language";
 
 export interface Book {
   readonly name: string;

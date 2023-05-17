@@ -1,7 +1,7 @@
-import {Country} from "../domain/country/Country";
-import {getApplicableRate} from "../finance/TaxRule";
-import {PurchasedBook} from "./PurchasedBook";
-import {IdGenerator} from "../IdGenerator";
+import {Country} from "@app/domain/country/Country";
+import {getApplicableRate} from "@app/finance/TaxRule";
+import {PurchasedBook} from "@app/purchase/PurchasedBook";
+import {IdGenerator} from "@app/IdGenerator";
 
 export class Invoice {
   readonly id: number;

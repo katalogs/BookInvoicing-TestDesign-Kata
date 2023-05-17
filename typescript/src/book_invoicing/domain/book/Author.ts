@@ -1,4 +1,4 @@
-import {Country} from "../country/Country";
+import {Country} from "@app/domain/country/Country";
 
 export class Author {
   readonly name: string;

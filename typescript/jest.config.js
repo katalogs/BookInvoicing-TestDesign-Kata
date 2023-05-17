@@ -19,7 +19,7 @@ module.exports = {
   ],
   // A map from regular expressions to module names that allow to stub out resources with a single module
   moduleNameMapper: {
-    "@app/(.*)": "<rootDir>/src/com/murex/tbw/$1",
+    "@app/(.*)": "<rootDir>/src/book_invoicing/$1",
   },
   testEnvironment: "node",
   testRegex: "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",

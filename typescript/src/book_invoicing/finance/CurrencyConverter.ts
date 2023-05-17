@@ -1,5 +1,5 @@
 import * as Immutable from "immutable";
-import {Currency} from "../domain/country/Currency";
+import {Currency} from "@app/domain/country";
 
 const EXCHANGE_RATES = Immutable.Map<Currency, number>(
   new Map<Currency, number>([

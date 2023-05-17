@@ -1,5 +1,5 @@
-import {Repository} from "./storage/Repository";
-import {JsonRepository} from "./storage/JsonRepository";
+import {Repository} from "@app/storage/Repository";
+import {JsonRepository} from "@app/storage/JsonRepository";
 
 export class MainRepository {
   private static runningRepository: Repository;

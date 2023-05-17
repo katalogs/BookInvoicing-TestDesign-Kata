@@ -1,4 +1,4 @@
-import {ReportGenerator} from "./tbw/report/ReportGenerator";
+import {ReportGenerator} from "src/book_invoicing/report/ReportGenerator";
 
 function main(): void {
   const reportGenerator = new ReportGenerator();

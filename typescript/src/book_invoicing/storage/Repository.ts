@@ -1,4 +1,4 @@
-import {Invoice} from "../purchase/Invoice";
+import {Invoice} from "@app/purchase/Invoice";
 import * as Immutable from "immutable";
 
 export interface Repository {

@@ -1,8 +1,8 @@
-import {Book} from "../domain/book/Book";
-import {Country} from "../domain/country/Country";
+import {Book} from "@app/domain/book/Book";
+import {Country} from "@app/domain/country/Country";
 import * as Immutable from "immutable";
-import {Language} from "../domain/country/Language";
-import {isNovel} from "../domain/book/Novel";
+import {Language} from "@app/domain/country/Language";
+import {isNovel} from "@app/domain/book/Novel";
 
 const taxRates = Immutable.Map({
   USA: 1.15,

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@app/*": ["src/com/murex/tbw/*"] // resolve all modules prefixed with `@/` from `src` directory
+      "@app/*": ["src/book_invoicing/*"] // resolve all modules prefixed with `@/` from `src` directory
     },
     "module": "commonjs",
     "moduleResolution": "node",

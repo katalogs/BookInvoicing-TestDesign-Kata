@@ -1,4 +1,4 @@
-import {Country} from "../domain/country/Country";
+import {Country} from "@app/domain/country/Country";
 
 export class Client {
   readonly name: string;

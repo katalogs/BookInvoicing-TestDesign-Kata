@@ -1,4 +1,4 @@
-import {Book} from "../domain/book/Book";
+import {Book} from "@app/domain/book/Book";
 
 export class PurchasedBook {
   readonly book: Book;

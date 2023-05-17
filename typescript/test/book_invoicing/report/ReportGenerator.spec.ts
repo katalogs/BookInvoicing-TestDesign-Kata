@@ -1,9 +1,9 @@
 import {ReportGenerator} from '@app/report/ReportGenerator';
 import {MainRepository} from "@app/MainRepository";
-import {InMemoryRepository} from "../storage/InMemoryRepository";
 import {Author, Category, EducationalBook} from "@app/domain/book";
 import {Country, Currency, Language} from "@app/domain/country";
 import {Invoice, PurchasedBook} from "@app/purchase";
+import {InMemoryRepository} from "../storage/InMemoryRepository";
 
 describe(ReportGenerator, () => {
     it("Computes total amount without discount and without tax rate", () => {

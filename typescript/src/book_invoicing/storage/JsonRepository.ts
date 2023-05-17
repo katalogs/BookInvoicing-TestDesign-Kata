@@ -1,9 +1,10 @@
-import {Repository} from "./Repository";
-import {Invoice, PurchasedBook} from "@app/purchase";
 import * as Immutable from "immutable";
-import jsonData from "./repository.json";
-import {Country, Currency, Language} from "@app/domain/country";
+import jsonData from "@app/storage/repository.json";
+import {Repository} from "@app/storage/Repository";
+import {Invoice, PurchasedBook} from "@app/purchase";
 import {Author, Category, EducationalBook, Genre, Novel} from "@app/domain/book";
+import {Country, Currency, Language} from "@app/domain/country";
+
 
 export class JsonRepository implements Repository {
   private readonly invoices = new Map<number, Invoice>();

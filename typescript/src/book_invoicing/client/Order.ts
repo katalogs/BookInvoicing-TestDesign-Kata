@@ -1,5 +1,5 @@
-import {Book} from "../domain/book/Book";
-import {Invoice} from "../purchase/Invoice";
+import {Book} from "@app/domain/book/Book";
+import {Invoice} from "@app/purchase/Invoice";
 
 export interface Order {
   addBook(book: Book, quantity: number): void;
