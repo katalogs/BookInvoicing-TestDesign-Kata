@@ -4,6 +4,7 @@ using BookInvoicing.Domain.Country;
 using BookInvoicing.Purchase;
 using BookInvoicing.Report;
 using BookInvoicing.Tests.Storage;
+using FluentAssertions;
 using Xunit;
 
 namespace BookInvoicing.Tests
@@ -11,7 +12,7 @@ namespace BookInvoicing.Tests
     public class ReportGeneratorTests
     {
         [Fact]
-        public void ShouldComputeTotalAmount_WithoutDiscount_WithoutTaxExchange()
+        public void ShouldComputeTotalAmount_WithoutTaxRate_WithTaxRate_WithoutDiscount()
         {
             // Arrange
             var inMemoryRepository = OverrideRepositoryForTests();
@@ -35,15 +36,15 @@ namespace BookInvoicing.Tests
             inMemoryRepository.AddInvoice(invoice);
 
             // Assert
-            Assert.Equal(50, generator.GetTotalAmount());
-            Assert.Equal(1, generator.GetNumberOfIssuedInvoices());
-            Assert.Equal(2, generator.GetTotalSoldBooks());
+            generator.GetTotalAmount().Should().Be(57.5);
+            generator.GetNumberOfIssuedInvoices().Should().Be(1);
+            generator.GetTotalSoldBooks().Should().Be(2);
 
             ResetTestsRepository();
         }
 
         [Fact]
-        public void ShouldComputeTotalAmount_WithDiscount_WithTaxExchanges()
+        public void ShouldComputeTotalAmount_WithExchangeRate_WithoutTax()
         {
             // Arrange
             var inMemoryRepository = OverrideRepositoryForTests();
@@ -54,13 +55,13 @@ namespace BookInvoicing.Tests
                         "France", Currency.Euro, Language.French
                         )
                     ),
-                Language.English, new List<Genre> {Genre.Mystery, Genre.AdventureFiction }
+                Language.English, new List<Genre> { Genre.Mystery, Genre.AdventureFiction }
             );
 
             var purchasedBook = new PurchasedBook(book, 3);
 
             var invoice = new Invoice("John Doe", new Country(
-                "Germany", Currency.Euro, Language.German
+                "Spain", Currency.Euro, Language.Spanish
             ));
             invoice.AddPurchasedBooks(new List<PurchasedBook> { purchasedBook });
 
@@ -68,9 +69,9 @@ namespace BookInvoicing.Tests
             inMemoryRepository.AddInvoice(invoice);
 
             // Assert
-            Assert.Equal(106.5, generator.GetTotalAmount());
-            Assert.Equal(1, generator.GetNumberOfIssuedInvoices());
-            Assert.Equal(3, generator.GetTotalSoldBooks());
+            generator.GetTotalAmount().Should().Be(121.41);
+            generator.GetNumberOfIssuedInvoices().Should().Be(1);
+            generator.GetTotalSoldBooks().Should().Be(3);
 
             ResetTestsRepository();
         }
