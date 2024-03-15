@@ -1,3 +1,6 @@
+> This kata is used to train refactoring test inputs with tests data builders.  
+> For more information, see [this learning hour](https://sammancoaching.org/learning_hours/test_design/test_data_builders.html)
+
 # Test data builders kata 
 
 We own a company that sells Books on-line in various cities around the world.
@@ -55,6 +58,7 @@ The report should include the following:
 This kata includes the following versions:
 
 - [c#](./csharp/README.md)
+- [PHP](./php/README.md)
 - [typescript](./typescript/README.md)
 
 ## Credits
