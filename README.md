@@ -60,6 +60,7 @@ This kata includes the following versions:
 - [c#](./csharp/README.md)
 - [PHP](./php/README.md)
 - [typescript](./typescript/README.md)
+- [java](./java/README.md)
 
 ## Credits
 

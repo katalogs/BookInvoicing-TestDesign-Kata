@@ -351,3 +351,6 @@ yarn.lock
 # PHP
 vendor/
 composer.lock
+
+# java
+target/
