@@ -354,3 +354,6 @@ composer.lock
 
 # java
 target/
+
+# go
+go/*.exe
